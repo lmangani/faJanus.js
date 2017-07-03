@@ -1,4 +1,8 @@
+<p align="center">
 <img src="http://www.agricolailfagiano.com/wp-content/uploads/2015/11/sez-fagiano-home.png" width="200"/>
+<br><i> "I'm not smart" </i>
+</p>
+
 
 # faJanus
 NodeJS JANUS Event Simulator for CI Testing. Do not fly this.
@@ -8,7 +12,7 @@ npm install
 npm start
 ```
 
-## Pastash Recipe
+#### Pastash Recipe
 ```
 input {
  http {
