@@ -1,3 +1,14 @@
+var faker = require('faker');
+
+const uuid1 = (Math.random()+'1000000000000000').slice(2, 15+2);
+const uuid2 = (Math.random()+'1000000000000000').slice(2, 15+2);
+
+const name1 = faker.name.findName();
+const name2 = faker.name.findName();
+
+const ip1 = faker.internet.ip();
+const ip2 = faker.internet.ip();
+
 exports.seq = [
 {
    "type": 128,
@@ -8,7 +19,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -22,7 +33,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -30,7 +41,7 @@ exports.seq = [
 {
    "type": 1,
    "timestamp": 1499105773193112,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "event": {
       "name": "created",
       "transport": {
@@ -48,7 +59,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -62,7 +73,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -76,7 +87,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -84,7 +95,7 @@ exports.seq = [
 {
    "type": 2,
    "timestamp": 1499105773221049,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "name": "attached",
@@ -101,7 +112,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -115,7 +126,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -123,7 +134,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105774617244,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -132,7 +143,7 @@ exports.seq = [
          "room": 1234,
          "id": 5620321221303244,
          "private_id": 429531305,
-         "display": "enrico"
+         "display": name1
       }
    }
 },
@@ -145,7 +156,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -153,7 +164,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105774917523,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "owner": "remote",
@@ -166,7 +177,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105774919538,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -183,7 +194,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105774919881,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "owner": "local",
@@ -202,7 +213,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -210,7 +221,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105774920586,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "ice": "connecting",
@@ -227,7 +238,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -241,7 +252,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -255,7 +266,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -269,7 +280,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -283,7 +294,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -297,7 +308,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -311,7 +322,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -325,7 +336,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -339,7 +350,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -353,7 +364,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -367,7 +378,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -381,7 +392,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -395,7 +406,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -409,7 +420,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -417,7 +428,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105775170731,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "selected-pair": "192.168.1.89:52543 [host,udp] <-> 192.168.1.106:62614 [host,udp]",
@@ -428,7 +439,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105775171042,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "dtls": "trying",
@@ -439,7 +450,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105775171063,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "ice": "connected",
@@ -450,7 +461,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105775171161,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "ice": "ready",
@@ -467,7 +478,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -475,7 +486,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105775234979,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "dtls": "connected",
@@ -486,7 +497,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105775235149,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -500,7 +511,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105775235162,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "connection": "webrtcup"
@@ -509,7 +520,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105775249385,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -525,7 +536,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -533,7 +544,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105775654525,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -549,7 +560,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -563,7 +574,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -571,7 +582,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105776251153,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -592,7 +603,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105776251172,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -613,7 +624,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105777251425,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -634,7 +645,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105777251437,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -655,7 +666,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105778251640,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -676,7 +687,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105778251654,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -697,7 +708,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105778998875,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -708,7 +719,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105779499145,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -718,7 +729,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105779499156,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -739,7 +750,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105779499166,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -760,7 +771,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105779613378,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -776,7 +787,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -784,7 +795,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105780217077,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -795,7 +806,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105780613256,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -816,7 +827,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105780613266,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -843,7 +854,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -857,7 +868,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -865,7 +876,7 @@ exports.seq = [
 {
    "type": 1,
    "timestamp": 1499105780639781,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "event": {
       "name": "created",
       "transport": {
@@ -883,7 +894,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -897,7 +908,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -911,7 +922,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -919,7 +930,7 @@ exports.seq = [
 {
    "type": 2,
    "timestamp": 1499105780673375,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "name": "attached",
@@ -936,7 +947,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -950,7 +961,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -964,7 +975,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -978,7 +989,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -992,7 +1003,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -1000,7 +1011,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105781856019,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -1021,7 +1032,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105781856033,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -1048,7 +1059,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1062,7 +1073,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1070,7 +1081,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105782023952,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -1079,7 +1090,7 @@ exports.seq = [
          "room": 1234,
          "id": 7468932778387495,
          "private_id": 3264178256,
-         "display": "prova"
+         "display": name2
       }
    }
 },
@@ -1092,7 +1103,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1100,7 +1111,7 @@ exports.seq = [
 {
    "type": 2,
    "timestamp": 1499105782088970,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "name": "attached",
@@ -1117,7 +1128,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1131,7 +1142,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1139,7 +1150,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105782124852,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "owner": "local",
@@ -1152,7 +1163,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105782124924,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -1173,7 +1184,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1187,7 +1198,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1195,7 +1206,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105782188227,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "owner": "remote",
@@ -1214,7 +1225,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1222,7 +1233,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105782259365,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -1239,7 +1250,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782260015,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "ice": "connecting",
@@ -1250,7 +1261,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105782264187,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "owner": "local",
@@ -1269,7 +1280,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1283,7 +1294,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1297,7 +1308,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1311,7 +1322,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1325,7 +1336,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1339,7 +1350,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1353,7 +1364,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1367,7 +1378,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1381,7 +1392,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1395,7 +1406,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1409,7 +1420,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1423,7 +1434,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1437,7 +1448,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1451,7 +1462,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1465,7 +1476,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1479,7 +1490,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1493,7 +1504,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1501,7 +1512,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105782477741,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "owner": "remote",
@@ -1514,7 +1525,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782478202,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "ice": "connecting",
@@ -1525,7 +1536,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782542741,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "selected-pair": "192.168.1.89:46960 [host,udp] <-> 192.168.1.106:49806 [host,udp]",
@@ -1542,7 +1553,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1550,7 +1561,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782545250,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "ice": "connected",
@@ -1567,7 +1578,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1575,7 +1586,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782550369,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "dtls": "trying",
@@ -1586,7 +1597,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782551006,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "ice": "connected",
@@ -1597,7 +1608,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782551030,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "ice": "ready",
@@ -1614,7 +1625,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1628,7 +1639,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1636,7 +1647,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782576455,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "ice": "ready",
@@ -1647,7 +1658,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782589636,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "dtls": "connected",
@@ -1664,7 +1675,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -1672,7 +1683,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105782594990,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -1686,7 +1697,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782595006,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "connection": "webrtcup"
@@ -1701,7 +1712,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1715,7 +1726,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1729,7 +1740,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1737,7 +1748,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782973667,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "selected-pair": "192.168.1.89:48164 [host,udp] <-> 192.168.1.106:49799 [host,udp]",
@@ -1748,7 +1759,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782974023,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "dtls": "trying",
@@ -1759,7 +1770,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782974078,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "ice": "connected",
@@ -1770,7 +1781,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105782974819,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "ice": "ready",
@@ -1787,7 +1798,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -1795,7 +1806,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105783027638,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "dtls": "connected",
@@ -1806,7 +1817,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105783030729,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -1820,7 +1831,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105783030793,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "connection": "webrtcup"
@@ -1829,7 +1840,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105783048292,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -1839,7 +1850,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105783095395,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -1860,7 +1871,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105783095409,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -1881,7 +1892,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105783095721,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -1897,7 +1908,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -1911,7 +1922,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -1919,7 +1930,7 @@ exports.seq = [
 {
    "type": 2,
    "timestamp": 1499105783161465,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "name": "attached",
@@ -1936,7 +1947,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -1950,7 +1961,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -1958,7 +1969,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105783196397,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "owner": "local",
@@ -1971,7 +1982,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105783196411,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -1992,7 +2003,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -2006,7 +2017,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -2020,7 +2031,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -2028,7 +2039,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105783420261,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "owner": "remote",
@@ -2047,7 +2058,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -2061,7 +2072,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -2075,7 +2086,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -2083,7 +2094,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105783447352,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "ice": "connecting",
@@ -2100,7 +2111,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -2108,7 +2119,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105783456799,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "selected-pair": "192.168.1.89:38875 [host,udp] <-> 192.168.1.106:49809 [host,udp]",
@@ -2119,7 +2130,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105783456955,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "dtls": "trying",
@@ -2130,7 +2141,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105783456980,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "ice": "connected",
@@ -2147,7 +2158,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -2155,7 +2166,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105783458227,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "ice": "ready",
@@ -2166,7 +2177,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105783528734,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "dtls": "connected",
@@ -2177,7 +2188,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105783534369,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -2191,7 +2202,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105783535814,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "connection": "webrtcup"
@@ -2200,7 +2211,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105783561898,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "audio",
@@ -2221,7 +2232,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105783561909,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "video",
@@ -2248,7 +2259,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -2262,7 +2273,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -2276,7 +2287,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -2290,7 +2301,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -2304,7 +2315,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -2312,7 +2323,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105784034459,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -2333,7 +2344,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105784034474,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -2354,7 +2365,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105784095507,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -2375,7 +2386,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105784095523,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -2396,7 +2407,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105784492049,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "audio",
@@ -2417,7 +2428,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105784492077,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "video",
@@ -2438,7 +2449,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105784565018,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "audio",
@@ -2459,7 +2470,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105784565030,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "video",
@@ -2480,7 +2491,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105785034687,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -2501,7 +2512,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105785034699,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -2522,7 +2533,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105785095704,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -2543,7 +2554,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105785095716,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -2564,7 +2575,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105785492539,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "audio",
@@ -2585,7 +2596,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105785492549,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "video",
@@ -2606,7 +2617,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105785567700,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "audio",
@@ -2627,7 +2638,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105785567715,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "video",
@@ -2648,7 +2659,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105786034793,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -2669,7 +2680,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105786034806,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -2690,7 +2701,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105786270694,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -2711,7 +2722,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105786270716,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -2732,7 +2743,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105786494035,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "audio",
@@ -2753,7 +2764,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105786495584,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "video",
@@ -2774,7 +2785,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105786585312,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "audio",
@@ -2795,7 +2806,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105786585321,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "video",
@@ -2816,7 +2827,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105787270952,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -2837,7 +2848,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105787270971,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -2858,7 +2869,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105787417108,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -2879,7 +2890,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105787417127,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -2900,7 +2911,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105787513544,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "audio",
@@ -2921,7 +2932,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105787513553,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "video",
@@ -2942,7 +2953,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105787609858,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "audio",
@@ -2963,7 +2974,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105787609885,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "video",
@@ -2984,7 +2995,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105788271378,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -3005,7 +3016,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105788271410,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -3026,7 +3037,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105788540730,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "audio",
@@ -3047,7 +3058,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105788542526,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "video",
@@ -3068,7 +3079,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105788610206,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "audio",
@@ -3089,7 +3100,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105788610217,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "video",
@@ -3110,7 +3121,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105788704545,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -3131,7 +3142,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105788704558,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -3152,7 +3163,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105789271545,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -3173,7 +3184,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105789271561,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -3194,7 +3205,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105789550645,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "audio",
@@ -3215,7 +3226,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105789550655,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "video",
@@ -3236,7 +3247,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105789615739,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "audio",
@@ -3257,7 +3268,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105789622529,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "video",
@@ -3278,7 +3289,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105789704770,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -3299,7 +3310,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105789704805,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -3320,7 +3331,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105790271699,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -3341,7 +3352,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105790271712,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -3362,7 +3373,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105790675979,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "audio",
@@ -3383,7 +3394,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105790675991,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "video",
@@ -3404,7 +3415,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105790679226,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "audio",
@@ -3425,7 +3436,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105790679236,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "video",
@@ -3446,7 +3457,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105790704962,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -3467,7 +3478,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105790704975,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -3488,7 +3499,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105790926766,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -3499,7 +3510,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105791002173,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -3510,7 +3521,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105791427205,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -3531,7 +3542,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105791427216,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -3552,7 +3563,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105792146484,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -3563,7 +3574,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105792146578,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -3574,7 +3585,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105792146605,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "audio",
@@ -3595,7 +3606,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105792146611,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "video",
@@ -3616,7 +3627,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105792146816,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -3637,7 +3648,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105792146822,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -3658,7 +3669,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105792146905,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "audio",
@@ -3679,7 +3690,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105792146914,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "video",
@@ -3706,7 +3717,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -3720,7 +3731,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -3734,7 +3745,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -3748,7 +3759,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -3756,7 +3767,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105792343841,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -3770,7 +3781,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105792343847,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "connection": "hangup"
@@ -3779,7 +3790,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105792429879,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -3800,7 +3811,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105792429889,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -3827,7 +3838,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -3841,7 +3852,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -3855,7 +3866,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -3869,7 +3880,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -3883,7 +3894,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -3891,7 +3902,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105792992675,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "connection": "hangup"
@@ -3906,7 +3917,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -3920,7 +3931,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -3928,7 +3939,7 @@ exports.seq = [
 {
    "type": 2,
    "timestamp": 1499105793015396,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "name": "detached",
@@ -3944,7 +3955,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -3952,7 +3963,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105793158379,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "audio",
@@ -3973,7 +3984,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105793158390,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "video",
@@ -4000,7 +4011,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4014,7 +4025,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4028,7 +4039,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4036,7 +4047,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105793415588,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "audio",
@@ -4057,7 +4068,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105793415602,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 1947809509279987,
    "event": {
       "media": "video",
@@ -4084,7 +4095,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4098,7 +4109,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -4106,7 +4117,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105793682670,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -4127,7 +4138,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105793682681,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -4154,7 +4165,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -4168,7 +4179,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -4176,7 +4187,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105793991979,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -4190,7 +4201,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105793991986,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "connection": "hangup"
@@ -4199,7 +4210,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105794071117,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "connection": "hangup"
@@ -4214,7 +4225,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4228,7 +4239,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4236,7 +4247,7 @@ exports.seq = [
 {
    "type": 2,
    "timestamp": 1499105794091778,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "name": "detached",
@@ -4252,7 +4263,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4266,7 +4277,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4280,7 +4291,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4294,7 +4305,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -4302,7 +4313,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105794491881,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "audio",
@@ -4323,7 +4334,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105794491890,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 1024724638386209,
    "event": {
       "media": "video",
@@ -4350,7 +4361,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -4364,7 +4375,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -4372,7 +4383,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105795911163,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "owner": "remote",
@@ -4385,7 +4396,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105795913080,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -4402,7 +4413,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105795913363,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "owner": "local",
@@ -4421,7 +4432,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -4435,7 +4446,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -4443,7 +4454,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105795932736,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "ice": "connecting",
@@ -4460,7 +4471,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -4474,7 +4485,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4488,7 +4499,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -4502,7 +4513,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -4516,7 +4527,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4530,7 +4541,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -4544,7 +4555,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -4558,7 +4569,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4572,7 +4583,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -4586,7 +4597,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -4594,7 +4605,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796135794,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "selected-pair": "192.168.1.89:36450 [host,udp] <-> 192.168.1.106:49816 [host,udp]",
@@ -4605,7 +4616,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796140314,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "dtls": "trying",
@@ -4616,7 +4627,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796140389,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "ice": "connected",
@@ -4627,7 +4638,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796140510,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "ice": "ready",
@@ -4644,7 +4655,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -4652,7 +4663,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796193546,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "dtls": "connected",
@@ -4663,7 +4674,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105796195550,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -4677,7 +4688,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796195581,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "connection": "webrtcup"
@@ -4686,7 +4697,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105796208583,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -4702,7 +4713,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -4716,7 +4727,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -4724,7 +4735,7 @@ exports.seq = [
 {
    "type": 2,
    "timestamp": 1499105796243925,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "name": "attached",
@@ -4741,7 +4752,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -4755,7 +4766,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -4763,7 +4774,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105796301514,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "owner": "local",
@@ -4776,7 +4787,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105796305644,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -4797,7 +4808,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -4811,7 +4822,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -4825,7 +4836,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -4833,7 +4844,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105796500733,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "owner": "remote",
@@ -4852,7 +4863,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -4866,7 +4877,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -4874,7 +4885,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796504454,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "ice": "connecting",
@@ -4891,7 +4902,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -4905,7 +4916,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -4913,7 +4924,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796529684,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "selected-pair": "192.168.1.89:40553 [host,udp] <-> 192.168.1.106:49823 [host,udp]",
@@ -4924,7 +4935,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796529823,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "dtls": "trying",
@@ -4935,7 +4946,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796529842,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "ice": "connected",
@@ -4946,7 +4957,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796530318,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "ice": "ready",
@@ -4957,7 +4968,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796614553,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "dtls": "connected",
@@ -4968,7 +4979,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105796615237,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -4982,7 +4993,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105796615274,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "connection": "webrtcup"
@@ -4991,7 +5002,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105796653868,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -5007,7 +5018,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -5021,7 +5032,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -5035,7 +5046,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -5049,7 +5060,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -5063,7 +5074,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -5077,7 +5088,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5085,7 +5096,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105797289997,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "owner": "remote",
@@ -5104,7 +5115,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -5112,7 +5123,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105797293438,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -5129,7 +5140,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105797339693,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -5150,7 +5161,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105797339714,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -5177,7 +5188,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -5191,7 +5202,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5205,7 +5216,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -5219,7 +5230,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5227,7 +5238,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797366589,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "ice": "connecting",
@@ -5238,7 +5249,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105797380863,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "owner": "local",
@@ -5257,7 +5268,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -5271,7 +5282,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5285,7 +5296,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5299,7 +5310,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -5313,7 +5324,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -5327,7 +5338,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5341,7 +5352,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -5355,7 +5366,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -5369,7 +5380,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5383,7 +5394,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -5397,7 +5408,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -5411,7 +5422,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5425,7 +5436,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -5439,7 +5450,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -5453,7 +5464,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5467,7 +5478,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -5481,7 +5492,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -5495,7 +5506,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5509,7 +5520,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -5523,7 +5534,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5537,7 +5548,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -5545,7 +5556,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105797543146,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "media": "audio",
@@ -5566,7 +5577,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105797543167,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "media": "video",
@@ -5587,7 +5598,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797591182,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "selected-pair": "192.168.1.89:43019 [host,udp] <-> 192.168.1.106:49826 [host,udp]",
@@ -5598,7 +5609,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797591940,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "dtls": "trying",
@@ -5609,7 +5620,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797592062,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "ice": "connected",
@@ -5620,7 +5631,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797592151,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "ice": "ready",
@@ -5637,7 +5648,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -5645,7 +5656,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797641691,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "dtls": "connected",
@@ -5656,7 +5667,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105797641995,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -5670,7 +5681,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797642003,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "connection": "webrtcup"
@@ -5679,7 +5690,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105797662905,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -5695,7 +5706,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -5709,7 +5720,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -5717,7 +5728,7 @@ exports.seq = [
 {
    "type": 2,
    "timestamp": 1499105797691751,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "name": "attached",
@@ -5734,7 +5745,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -5748,7 +5759,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -5756,7 +5767,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105797728779,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "owner": "local",
@@ -5769,7 +5780,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105797728797,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -5784,7 +5795,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105797768135,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -5800,7 +5811,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -5814,7 +5825,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -5822,7 +5833,7 @@ exports.seq = [
 {
    "type": 8,
    "timestamp": 1499105797938821,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "owner": "remote",
@@ -5841,7 +5852,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -5855,7 +5866,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -5863,7 +5874,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797971937,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "ice": "connecting",
@@ -5880,7 +5891,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -5894,7 +5905,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -5908,7 +5919,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -5916,7 +5927,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797991791,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "selected-pair": "192.168.1.89:51063 [host,udp] <-> 192.168.1.106:49833 [host,udp]",
@@ -5927,7 +5938,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797991972,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "dtls": "trying",
@@ -5938,7 +5949,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797992019,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "ice": "connected",
@@ -5949,7 +5960,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105797992406,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "ice": "ready",
@@ -5966,7 +5977,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -5974,7 +5985,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105798089056,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "dtls": "connected",
@@ -5985,7 +5996,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105798094283,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -5999,7 +6010,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105798094308,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "connection": "webrtcup"
@@ -6014,7 +6025,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -6028,7 +6039,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -6036,7 +6047,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105798340928,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -6057,7 +6068,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105798340943,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -6084,7 +6095,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -6098,7 +6109,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -6106,7 +6117,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105798567876,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "media": "audio",
@@ -6127,7 +6138,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105798567933,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "media": "video",
@@ -6148,7 +6159,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105798594332,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -6169,7 +6180,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105798594347,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -6190,7 +6201,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105798995425,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "media": "audio",
@@ -6211,7 +6222,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105798998049,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "media": "video",
@@ -6232,7 +6243,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105799345620,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -6253,7 +6264,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105799345636,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -6274,7 +6285,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105799572036,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "media": "audio",
@@ -6295,7 +6306,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105799574553,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "media": "video",
@@ -6316,7 +6327,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105799594678,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -6337,7 +6348,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105799594691,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -6358,7 +6369,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105800013084,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "media": "audio",
@@ -6379,7 +6390,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105800013099,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "media": "video",
@@ -6400,7 +6411,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105800345934,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -6421,7 +6432,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105800345944,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -6442,7 +6453,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105800575380,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "media": "audio",
@@ -6463,7 +6474,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105800576775,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "media": "video",
@@ -6484,7 +6495,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105800594993,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -6505,7 +6516,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105800595006,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -6526,7 +6537,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105801026787,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "media": "audio",
@@ -6547,7 +6558,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105801026797,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "media": "video",
@@ -6568,7 +6579,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105801346095,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -6589,7 +6600,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105801346108,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -6610,7 +6621,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105801425964,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -6624,7 +6635,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105801428364,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "connection": "hangup"
@@ -6639,7 +6650,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -6647,7 +6658,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105801433973,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -6661,7 +6672,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105801433986,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "connection": "hangup"
@@ -6670,7 +6681,7 @@ exports.seq = [
 {
    "type": 2,
    "timestamp": 1499105801434068,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "name": "detached",
@@ -6686,7 +6697,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -6700,7 +6711,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -6708,7 +6719,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105801462327,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "connection": "hangup"
@@ -6723,7 +6734,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61766
       }
    }
@@ -6731,7 +6742,7 @@ exports.seq = [
 {
    "type": 2,
    "timestamp": 1499105801465681,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "name": "detached",
@@ -6747,7 +6758,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -6755,7 +6766,7 @@ exports.seq = [
 {
    "type": 1,
    "timestamp": 1499105801466813,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "event": {
       "name": "destroyed"
    }
@@ -6769,7 +6780,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -6777,7 +6788,7 @@ exports.seq = [
 {
    "type": 2,
    "timestamp": 1499105801471690,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 7150481353068837,
    "event": {
       "name": "detached",
@@ -6787,7 +6798,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105801595569,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "audio",
@@ -6808,7 +6819,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105801595583,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 69919631797592,
    "event": {
       "media": "video",
@@ -6835,7 +6846,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -6849,7 +6860,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -6857,7 +6868,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105801931270,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "media": "audio",
@@ -6878,7 +6889,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105801931283,
-   "session_id": 165682434577046,
+   "session_id": uuid2,
    "handle_id": 732599108977304,
    "event": {
       "media": "video",
@@ -6905,7 +6916,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -6913,7 +6924,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105802351734,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -6934,7 +6945,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105802351750,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -6955,7 +6966,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105802777616,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -6966,7 +6977,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105803370573,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -6987,7 +6998,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105803370582,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -7008,7 +7019,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105804054748,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -7019,7 +7030,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105804472704,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "audio",
@@ -7040,7 +7051,7 @@ exports.seq = [
 {
    "type": 32,
    "timestamp": 1499105804472714,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "media": "video",
@@ -7067,7 +7078,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -7081,7 +7092,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -7089,7 +7100,7 @@ exports.seq = [
 {
    "type": 64,
    "timestamp": 1499105804478146,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "plugin": "janus.plugin.videoroom",
@@ -7103,7 +7114,7 @@ exports.seq = [
 {
    "type": 16,
    "timestamp": 1499105804478184,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "handle_id": 8796940787397620,
    "event": {
       "connection": "hangup"
@@ -7118,7 +7129,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61737
       }
    }
@@ -7132,7 +7143,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61811
       }
    }
@@ -7146,7 +7157,7 @@ exports.seq = [
       "data": {
          "event": "request",
          "admin_api": false,
-         "ip": "::ffff:192.168.1.106",
+         "ip": "::ffff:"+ip1,
          "port": 61739
       }
    }
@@ -7154,7 +7165,7 @@ exports.seq = [
 {
    "type": 1,
    "timestamp": 1499105804500507,
-   "session_id": 178737825989245,
+   "session_id": uuid1,
    "event": {
       "name": "destroyed"
    }

@@ -3,8 +3,10 @@
   "description": "JANUS Event Simulator",
   "author": "lorenzo.mangani@gmail.com",
   "private": true,
+  "version": "1.0.0",
   "dependencies": {
-    "requestify": "*"
+    "requestify": "*",
+    "faker": "*"
   },
   "config": {
     "unsafe-perm":true
