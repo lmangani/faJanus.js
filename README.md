@@ -1,11 +1,11 @@
 <p align="center">
 <img src="http://www.agricolailfagiano.com/wp-content/uploads/2015/11/sez-fagiano-home.png" width="200"/>
-<br><i> "I'm not smart" </i>
+<br><i>_fagiano [latin: phasianus, greek: ϕασιανός]_</i>
 </p>
 
 
 # faJanus
-NodeJS JANUS Event Simulator for CI Testing. Do not fly this.
+NodeJS JANUS Event Phase Simulator for CI Testing. Do not fly this.
 
 ```
 npm install
