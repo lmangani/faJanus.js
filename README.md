@@ -1,10 +1,10 @@
 <p align="center">
 <img src="http://www.agricolailfagiano.com/wp-content/uploads/2015/11/sez-fagiano-home.png" width="200"/>
-<br><i>_fagiano [latin: phasianus, greek: ϕασιανός]_</i>
+<br><i><b>fagiano</b> [latin: phasianus, greek: ϕασιανός]</i>
 </p>
 
 
-# faJanus
+# FaJanus
 NodeJS JANUS Event Phase Simulator for CI Testing. Do not fly this.
 
 ```
