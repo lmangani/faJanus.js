@@ -9,6 +9,9 @@ const name2 = faker.name.findName();
 const ip1 = faker.internet.ip();
 const ip2 = faker.internet.ip();
 
+const opq1 = faker.internet.password();
+const opq2 = faker.internet.password();
+
 exports.seq = [
 {
    "type": 128,
@@ -100,7 +103,7 @@ exports.seq = [
    "event": {
       "name": "attached",
       "plugin": "janus.plugin.videoroom",
-      "opaque_id": "videoroomtest-kli56Og94qs5"
+      "opaque_id": "videoroomtest-"+opq1
    }
 },
 {
@@ -935,7 +938,7 @@ exports.seq = [
    "event": {
       "name": "attached",
       "plugin": "janus.plugin.videoroom",
-      "opaque_id": "videoroomtest-zyNbvzALGhJW"
+      "opaque_id": "videoroomtest-"+opq2
    }
 },
 {
@@ -1116,7 +1119,7 @@ exports.seq = [
    "event": {
       "name": "attached",
       "plugin": "janus.plugin.videoroom",
-      "opaque_id": "videoroomtest-zyNbvzALGhJW"
+      "opaque_id": "videoroomtest-"+opq2
    }
 },
 {
@@ -1935,7 +1938,7 @@ exports.seq = [
    "event": {
       "name": "attached",
       "plugin": "janus.plugin.videoroom",
-      "opaque_id": "videoroomtest-kli56Og94qs5"
+      "opaque_id": "videoroomtest-"+opq1
    }
 },
 {
@@ -4740,7 +4743,7 @@ exports.seq = [
    "event": {
       "name": "attached",
       "plugin": "janus.plugin.videoroom",
-      "opaque_id": "videoroomtest-zyNbvzALGhJW"
+      "opaque_id": "videoroomtest-"+opq2
    }
 },
 {
@@ -5733,7 +5736,7 @@ exports.seq = [
    "event": {
       "name": "attached",
       "plugin": "janus.plugin.videoroom",
-      "opaque_id": "videoroomtest-kli56Og94qs5"
+      "opaque_id": "videoroomtest-"+opq1
    }
 },
 {
