@@ -12,6 +12,9 @@ npm install
 npm start
 ```
 
+##### Flight of the FaJanus
+<img src="https://camo.githubusercontent.com/45387b77b5611c19312f67eb6bf40451046b4e28/687474703a2f2f692e696d6775722e636f6d2f694b45566c47622e706e67" />
+
 #### Pastash Recipe
 ```
 input {
