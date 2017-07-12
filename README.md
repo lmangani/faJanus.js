@@ -23,9 +23,6 @@ input {
 
 filter{
   json_fields{}
-}
-
-filter{
   app_janus{} 
 }
 
