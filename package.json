@@ -5,16 +5,16 @@
   "private": true,
   "version": "1.0.0",
   "dependencies": {
-    "requestify": "*",
-    "faker": "*"
+    "faker": "*",
+    "request": "^2.85.0",
+    "requestify": "*"
   },
   "config": {
-    "unsafe-perm":true
+    "unsafe-perm": true
   },
   "scripts": {
     "start": "nodejs fajanus.js"
   },
-
   "licenses": {
     "type": "MIT",
     "url": "https://github.com/sipcapture/hepgen.js/blob/master/LICENSE"

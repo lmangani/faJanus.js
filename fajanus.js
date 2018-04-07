@@ -3,7 +3,7 @@
 var janus = require('./janus_seq.js');
 var request = require('request');
 
-var target_host = 'http://localhost:8080';
+var target_host = 'http://localhost:8123';
 var headersOpt = {
     "content-type": "application/json",
 };
