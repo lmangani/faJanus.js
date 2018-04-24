@@ -9,7 +9,7 @@ NodeJS JANUS Event Phase Simulator for CI Testing. Do not fly this.
 
 ```
 npm install
-npm start
+node fajanus.js --file /path/to/file.js --url http://your.socket:1234
 ```
 
 ##### Flight of the FaJanus

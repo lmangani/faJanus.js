@@ -5,6 +5,7 @@
   "private": true,
   "version": "1.0.0",
   "dependencies": {
+    "command-line-args": "^5.0.2",
     "faker": "*",
     "request": "^2.85.0",
     "requestify": "*"
@@ -13,7 +14,7 @@
     "unsafe-perm": true
   },
   "scripts": {
-    "start": "nodejs fajanus.js"
+    "start": "node fajanus.js"
   },
   "licenses": {
     "type": "MIT",

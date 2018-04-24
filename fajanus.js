@@ -1,14 +1,18 @@
 /* FaJanus 1.0.0 */
 
-var janus = require('./janus_seq.js');
-var request = require('request');
+const CommandLineArgs = require('command-line-args');
+var defaults = [{ name: 'file', alias: 'f' }, { name: 'url', alias: 'u' }]
+var options = CommandLineArgs(defaults);
 
-var target_host = 'http://localhost:8123';
+var request = require('request');
+var janus = require( options.file || './janus_seq.js');
+
+var target_host = options.url || 'http://localhost:8123';
 var headersOpt = {
     "content-type": "application/json",
 };
 
-console.log('... Fly, Fajanus!');
+console.log('... Fly, Fajanus!',options);
 
 var prevts = 0;
 var wait = 0;

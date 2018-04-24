@@ -7154,7 +7154,7 @@ exports.seq = [
       }
    }
 },
-{
+[{
    "type": 128,
    "timestamp": 1499105804491185,
    "event": {
@@ -7175,7 +7175,7 @@ exports.seq = [
    "event": {
       "name": "destroyed"
    }
-},
+}],
 {"emitter":"MyJanusInstance","type":256,"timestamp":1499105804600507,"event":{"status":"shutdown","signum":2}}
 ];
 
