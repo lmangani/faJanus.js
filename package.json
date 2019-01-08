@@ -7,7 +7,7 @@
   "dependencies": {
     "command-line-args": "^5.0.2",
     "faker": "*",
-    "request": "^2.85.0",
+    "request": "^2.88.0",
     "requestify": "*"
   },
   "config": {
