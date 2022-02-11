@@ -30,14 +30,11 @@ filter{
 }
 
 output {
- elasticsearch{
-   host => your.elk.stack
-   port => 9200
-   bulk_limit => 1000
-   bulk_timeout => 100
-   index_prefix => janus
-   data_type => event
- }
+ loki {
+    host => cloki.host
+    port => 3100
+    path => "/loki/api/v1/push"
+  }
 }
 
 ```
